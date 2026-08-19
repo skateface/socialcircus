@@ -1,0 +1,12 @@
+{
+  "name": "Social Circus",
+  "short_name": "Social Circus",
+  "description": "Party games, icebreakers & team-building tools.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF9EC",
+  "theme_color": "#D7263D",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

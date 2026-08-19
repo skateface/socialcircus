@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#D7263D"/>
+  <rect width="1200" height="630" fill="url(#stripes)" opacity="0.15"/>
+  <defs>
+    <pattern id="stripes" width="80" height="630" patternUnits="userSpaceOnUse">
+      <rect width="40" height="630" fill="#FFF9EC"/>
+    </pattern>
+  </defs>
+  <circle cx="150" cy="150" r="40" fill="#F4B400"/>
+  <circle cx="1080" cy="480" r="60" fill="#0A8F84"/>
+  <circle cx="1000" cy="120" r="30" fill="#6C3BAA"/>
+  <text x="600" y="300" font-family="Fredoka, Trebuchet MS, sans-serif" font-size="90" font-weight="700" fill="#FFF9EC" text-anchor="middle">🎪 Social Circus</text>
+  <text x="600" y="380" font-family="Nunito Sans, sans-serif" font-size="34" fill="#FFF9EC" text-anchor="middle">Party games, icebreakers &amp; team-building tools</text>
+</svg>

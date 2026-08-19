@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+ogType: article
+---
+<article class="container post">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a><span aria-hidden="true"> › </span><a href="/blog/">Guides</a><span aria-hidden="true"> › </span><span>{{ title }}</span>
+  </nav>
+  <h1>{{ title }}</h1>
+  <p class="post__meta">Published {{ date | dateReadable }}{% if updated %} · Updated {{ updated | dateReadable }}{% endif %}</p>
+
+  <div class="post__body">
+    {{ content | safe }}
+  </div>
+
+  {% if relatedTools %}
+  <div class="post-cta">
+    <p class="post-cta__heading">Try it yourself</p>
+    <div class="post-cta__tools">
+      {% for tool in relatedTools %}
+      <a class="btn btn-primary" href="{{ tool.url }}">{{ tool.label }} →</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% include "partials/ad-slot.njk" %}
+</article>

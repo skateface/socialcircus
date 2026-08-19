@@ -1,0 +1,37 @@
+---
+layout: layouts/tool.njk
+title: Icebreaker Question Generator
+description: Generate random icebreaker questions for work meetings, remote teams, deep conversations, or just plain fun. Free, instant, no sign-up.
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Tools", url: "/tools/" }
+  - { name: "Icebreaker Generator", url: "/tools/icebreaker-generator/" }
+relatedPosts:
+  - { title: "50 Icebreaker Questions for Work Meetings", url: "/blog/icebreaker-questions-for-work-meetings/" }
+  - { title: "Icebreaker Games for Remote Teams", url: "/blog/icebreaker-games-for-remote-teams/" }
+extraScripts:
+  - /js/data/icebreakers.js
+  - /js/tools/icebreaker-generator.js
+---
+<div class="tool-panel">
+  <p class="tool-panel__row"><label>Filter by category:</label></p>
+  <div class="tool-panel__filters" id="icebreaker-filters">
+    <label class="filter-chip"><input type="checkbox" value="work"> Work</label>
+    <label class="filter-chip"><input type="checkbox" value="remote"> Remote</label>
+    <label class="filter-chip"><input type="checkbox" value="fun"> Fun</label>
+    <label class="filter-chip"><input type="checkbox" value="deep"> Deep</label>
+    <label class="filter-chip"><input type="checkbox" value="kids-friendly"> Kid-friendly</label>
+  </div>
+  <p class="result-display" id="icebreaker-result">Click the button below to get your first question!</p>
+  <div class="tool-panel__actions">
+    <button class="btn btn-primary" id="icebreaker-generate" type="button">🎲 Generate a Question</button>
+    <button class="btn btn-tertiary" id="icebreaker-copy" type="button">📋 Copy</button>
+    <button class="btn btn-tertiary" id="icebreaker-share" type="button">🔗 Share</button>
+  </div>
+</div>
+
+<div class="prose-page" style="padding: 0 0 24px;">
+  <h2>How to use this icebreaker generator</h2>
+  <p>Leave every category unchecked to pull from the full mix, or select one or more categories — <strong>Work</strong>, <strong>Remote</strong>, <strong>Fun</strong>, <strong>Deep</strong>, or <strong>Kid-friendly</strong> — to narrow the pool. Hit "Generate" for a new question any time; it won't repeat the one you just saw. Use "Copy" to paste the question into Slack, Zoom chat, or a meeting agenda, or "Share" to send it directly from your phone.</p>
+  <p>Looking for a themed list instead of a random generator? Check out our guide to <a href="/blog/icebreaker-questions-for-work-meetings/">50 icebreaker questions for work meetings</a> or <a href="/blog/icebreaker-games-for-remote-teams/">icebreaker games built for remote teams</a>.</p>
+</div>

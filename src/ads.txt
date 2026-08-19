@@ -1,0 +1,10 @@
+# TODO (site owner): This is a placeholder ads.txt file.
+#
+# Once your Google AdSense account is approved, replace the line below with
+# the real authorized-seller line from your AdSense dashboard
+# (Account > Sites > "Ads.txt" or the snippet shown at signup). It looks like:
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#
+# Do not add a real line until you have the exact publisher ID from AdSense —
+# an incorrect ads.txt can prevent ads from serving correctly.

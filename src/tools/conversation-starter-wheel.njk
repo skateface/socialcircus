@@ -1,0 +1,44 @@
+---
+layout: layouts/tool.njk
+title: Conversation Starter Wheel
+description: Spin the wheel for a random conversation starter perfect for dinner parties, dates, or family gatherings. Free, interactive, and instant.
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Tools", url: "/tools/" }
+  - { name: "Conversation Starter Wheel", url: "/tools/conversation-starter-wheel/" }
+relatedPosts:
+  - { title: "Conversation Starters for Every Situation", url: "/blog/conversation-starters-for-every-situation/" }
+  - { title: "How to Host a Game Night", url: "/blog/how-to-host-a-game-night/" }
+extraScripts:
+  - /js/data/conversation-starters.js
+  - /js/tools/conversation-starter-wheel.js
+---
+<div class="tool-panel">
+  <p class="tool-panel__row"><label>Filter by setting:</label></p>
+  <div class="tool-panel__filters" id="conversation-filters">
+    <label class="filter-chip"><input type="checkbox" value="dinner-party"> Dinner party</label>
+    <label class="filter-chip"><input type="checkbox" value="dates"> Dates</label>
+    <label class="filter-chip"><input type="checkbox" value="family"> Family</label>
+    <label class="filter-chip"><input type="checkbox" value="icebreaker-lite"> Light icebreaker</label>
+  </div>
+
+  <div class="wheel-wrap">
+    <div class="wheel-stage">
+      <div class="wheel-pointer" aria-hidden="true"></div>
+      <div class="wheel" id="conversation-wheel" aria-hidden="true"></div>
+      <div class="wheel-hub" aria-hidden="true">🎪</div>
+    </div>
+    <button class="btn btn-primary" id="conversation-spin" type="button">🎡 Spin the Wheel</button>
+    <p class="result-display" id="conversation-result">Spin to get your first conversation starter!</p>
+    <div class="tool-panel__actions">
+      <button class="btn btn-tertiary" id="conversation-copy" type="button">📋 Copy</button>
+      <button class="btn btn-tertiary" id="conversation-share" type="button">🔗 Share</button>
+    </div>
+  </div>
+</div>
+
+<div class="prose-page" style="padding: 24px 0;">
+  <h2>How the conversation starter wheel works</h2>
+  <p>Pick a setting — or leave every box unchecked to pull from all of them — then hit "Spin." The wheel lands on a fresh prompt every time, and it won't repeat the one you just got. Great for dinner parties that have gone quiet, first dates that need a nudge, or family dinners looking for something better than "how was your day."</p>
+  <p>Want a printable list instead? Read <a href="/blog/conversation-starters-for-every-situation/">conversation starters for every situation</a>.</p>
+</div>

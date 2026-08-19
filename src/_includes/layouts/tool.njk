@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+---
+<div class="tool-hero">
+  <div class="tent-stripes tent-stripes--hero" aria-hidden="true"></div>
+  {% include "partials/confetti-svg.njk" %}
+  <div class="container">
+    {% if breadcrumbs %}
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      {% for crumb in breadcrumbs %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% if not loop.last %}<span aria-hidden="true"> › </span>{% endif %}{% endfor %}
+    </nav>
+    {% endif %}
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="tool-hero__subtitle">{{ description }}</p>{% endif %}
+  </div>
+</div>
+
+<div class="container tool-layout">
+  <div class="tool-layout__main">
+    {{ content | safe }}
+  </div>
+  <aside class="tool-layout__sidebar">
+    {% include "partials/ad-slot.njk" %}
+    {% if relatedPosts %}
+    <div class="related-box">
+      <p class="related-box__heading">Related guides</p>
+      <ul>
+        {% for post in relatedPosts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </aside>
+</div>

@@ -1,0 +1,19 @@
+{#
+  Amazon affiliate product callout ("ticket stub" style).
+  Usage: {% include "partials/affiliate-card.njk" %} with these vars set beforehand:
+    productName, productBlurb, amazonSearchTerm
+  TODO (site owner): src/_data/site.js "amazonAffiliateTag" holds the placeholder tag —
+  replace it with your real Amazon Associates tracking ID.
+#}
+<div class="affiliate-card">
+  <div class="affiliate-card__stub">🎟️</div>
+  <div class="affiliate-card__body">
+    <p class="affiliate-card__eyebrow">Grab this for game night</p>
+    <p class="affiliate-card__name">{{ productName }}</p>
+    <p class="affiliate-card__blurb">{{ productBlurb }}</p>
+    <a class="btn btn-secondary btn-small"
+       href="https://www.amazon.com/s?k={{ amazonSearchTerm | urlencode }}&tag={{ site.amazonAffiliateTag }}"
+       rel="nofollow sponsored noopener"
+       target="_blank">Check price on Amazon →</a>
+  </div>
+</div>

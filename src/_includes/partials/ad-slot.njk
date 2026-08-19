@@ -1,0 +1,20 @@
+{#
+  Google AdSense placeholder.
+  TODO (site owner): once your AdSense account is approved:
+    1. Add the AdSense loader script to base.njk <head> (uncomment there).
+    2. Replace data-ad-client below with site.adsenseClientId in src/_data/site.js.
+    3. Replace data-ad-slot with a real ad unit slot ID created in your AdSense dashboard.
+  Until then this renders an empty, clearly-labeled placeholder box — nothing is served.
+#}
+<div class="ad-slot ad-slot--{{ variant or 'inline' }}" aria-label="Advertisement placeholder">
+  <span class="ad-slot__label">Advertisement</span>
+  <!--
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.adsenseClientId }}"
+       data-ad-slot="0000000000"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+</div>

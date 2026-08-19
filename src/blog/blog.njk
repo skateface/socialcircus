@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Party & Team-Building Guides
+description: Guides, checklists, and idea lists for icebreakers, party games, team-building activities, and hosting unforgettable get-togethers.
+permalink: /blog/
+---
+<section class="blog-index-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> › </span><span>Guides</span></nav>
+    <h1>Guides &amp; idea lists</h1>
+    <p>Everything you need to plan a get-together people actually remember.</p>
+  </div>
+</section>
+
+<section class="container blog-grid">
+  <div class="card-grid">
+    {% for post in collections.post %}
+    <a class="post-card" href="{{ post.url }}">
+      <p class="post-card__eyebrow">{{ post.data.category or "Guide" }}</p>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.data.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>

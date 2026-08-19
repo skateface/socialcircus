@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include "partials/meta.njk" %}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  {% include "partials/jsonld-website.njk" %}
+  {% include "partials/jsonld-breadcrumb.njk" %}
+  {% if date %}{% include "partials/jsonld-article.njk" %}{% endif %}
+  {% if faq %}{% include "partials/jsonld-faq.njk" %}{% endif %}
+  {#
+    TODO (site owner): once AdSense is approved, uncomment and set your client ID:
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  #}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="/js/main.js" defer></script>
+  {% if extraScripts %}
+    {% for src in extraScripts %}
+    <script src="{{ src }}" defer></script>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>

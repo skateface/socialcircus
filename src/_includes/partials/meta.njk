@@ -1,0 +1,19 @@
+{%- set pageTitle = title + " | " + site.name if title else site.name + " — " + site.tagline -%}
+{%- set pageDescription = description or site.description -%}
+{%- set pageUrl = site.url + page.url -%}
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}">
+<link rel="canonical" href="{{ pageUrl }}">
+
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:image" content="{{ site.url }}/images/social-card.svg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:image" content="{{ site.url }}/images/social-card.svg">
+{% if site.twitterHandle %}<meta name="twitter:site" content="{{ site.twitterHandle }}">{% endif %}

@@ -1,0 +1,14 @@
+{
+  "name": "socialcircus",
+  "version": "1.0.0",
+  "description": "Social Circus — party games, icebreakers, and team-building tools & guides.",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

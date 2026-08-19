@@ -1,0 +1,67 @@
+---
+layout: layouts/tool.njk
+title: Team-Building Activity Finder
+description: Match team-building activities to your team size, available time, location, and budget. Free finder tool with remote-friendly options.
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Tools", url: "/tools/" }
+  - { name: "Team-Building Finder", url: "/tools/team-building-finder/" }
+relatedPosts:
+  - { title: "20 Team-Building Activities for Small Groups", url: "/blog/team-building-activities-small-groups/" }
+  - { title: "18 Virtual Team-Building Activities", url: "/blog/virtual-team-building-activities/" }
+extraScripts:
+  - /js/data/team-activities.js
+  - /js/tools/team-building-finder.js
+---
+<form class="tool-panel" id="team-activity-form">
+  <div class="tool-panel__row">
+    <label for="team-activity-size">Team size?</label>
+    <input class="text-field" type="number" id="team-activity-size" min="0" placeholder="Any" style="width: 100px;">
+    <label for="team-activity-time">Time available?</label>
+    <select class="select-field" id="team-activity-time">
+      <option value="0">Any</option>
+      <option value="15">15 minutes or less</option>
+      <option value="30">30 minutes or less</option>
+      <option value="60">1 hour or less</option>
+      <option value="180">Half a day</option>
+    </select>
+  </div>
+  <div class="tool-panel__row">
+    <label>Location:</label>
+    <label><input type="radio" name="team-activity-location" value="any" checked> Any</label>
+    <label><input type="radio" name="team-activity-location" value="indoor"> In-person indoor</label>
+    <label><input type="radio" name="team-activity-location" value="outdoor"> Outdoor</label>
+    <label><input type="radio" name="team-activity-location" value="remote"> Remote</label>
+  </div>
+  <div class="tool-panel__row">
+    <label>Budget:</label>
+    <label><input type="radio" name="team-activity-budget" value="any" checked> Any</label>
+    <label><input type="radio" name="team-activity-budget" value="free"> Free</label>
+    <label><input type="radio" name="team-activity-budget" value="low"> Low cost</label>
+    <label><input type="radio" name="team-activity-budget" value="medium"> Medium budget</label>
+  </div>
+  <div class="tool-panel__actions">
+    <button class="btn btn-primary" type="submit">🤝 Find Activities</button>
+  </div>
+</form>
+
+<div id="team-activity-results"></div>
+<button class="btn btn-tertiary" id="team-activity-load-more" type="button" hidden>Load 3 more</button>
+
+<template id="team-activity-card-template">
+  <div class="result-card">
+    <h4 class="js-activity-name"></h4>
+    <p class="result-card__meta js-activity-meta"></p>
+    <p class="js-activity-desc"></p>
+    <details>
+      <summary>How to run it</summary>
+      <ol class="js-activity-steps"></ol>
+    </details>
+  </div>
+</template>
+
+<div class="prose-page" style="padding: 24px 0;">
+  <h2>How the team-building finder works</h2>
+  <p>Set your team size, how much time you have, whether you're meeting in person or remote, and your budget. Each result includes step-by-step instructions in a "How to run it" dropdown, so you can run the activity without any extra prep.</p>
+  <p>Need more ideas? See our full guides on <a href="/blog/team-building-activities-small-groups/">team-building for small groups</a> and <a href="/blog/virtual-team-building-activities/">virtual team-building for remote teams</a>.</p>
+</div>

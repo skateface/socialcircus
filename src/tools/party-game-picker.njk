@@ -1,0 +1,58 @@
+---
+layout: layouts/tool.njk
+title: Party Game Picker
+description: Find the perfect party game by filtering for group size, energy level, and indoor or outdoor setting. Free interactive game picker.
+breadcrumbs:
+  - { name: "Home", url: "/" }
+  - { name: "Tools", url: "/tools/" }
+  - { name: "Party Game Picker", url: "/tools/party-game-picker/" }
+relatedPosts:
+  - { title: "35 Best Party Games for Adults", url: "/blog/best-party-games-for-adults/" }
+  - { title: "Party Games for Large Groups", url: "/blog/party-games-for-large-groups/" }
+extraScripts:
+  - /js/data/party-games.js
+  - /js/tools/party-game-picker.js
+---
+<form class="tool-panel" id="party-game-form">
+  <div class="tool-panel__row">
+    <label for="party-game-size">How many players?</label>
+    <input class="text-field" type="number" id="party-game-size" min="0" placeholder="Any" style="width: 100px;">
+  </div>
+  <div class="tool-panel__row">
+    <label>Vibe:</label>
+  </div>
+  <div class="tool-panel__filters" id="party-game-vibes">
+    <label class="filter-chip"><input type="checkbox" value="chill"> Chill</label>
+    <label class="filter-chip"><input type="checkbox" value="chaotic"> Chaotic</label>
+    <label class="filter-chip"><input type="checkbox" value="competitive"> Competitive</label>
+    <label class="filter-chip"><input type="checkbox" value="creative"> Creative</label>
+  </div>
+  <div class="tool-panel__row">
+    <label>Setting:</label>
+    <label><input type="radio" name="party-game-setting" value="any" checked> Any</label>
+    <label><input type="radio" name="party-game-setting" value="indoor"> Indoor</label>
+    <label><input type="radio" name="party-game-setting" value="outdoor"> Outdoor</label>
+  </div>
+  <div class="tool-panel__actions">
+    <button class="btn btn-primary" type="submit">🎲 Find Games</button>
+    <button class="btn btn-tertiary" id="party-game-shuffle" type="button">🔀 Shuffle Results</button>
+    <button class="btn btn-tertiary" id="party-game-copy" type="button">📋 Copy List</button>
+  </div>
+</form>
+
+<div id="party-game-results" class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));"></div>
+
+<template id="party-game-card-template">
+  <div class="result-card">
+    <h4 class="js-game-name"></h4>
+    <p class="result-card__meta js-game-meta"></p>
+    <p class="js-game-desc"></p>
+    <p class="js-game-materials" style="font-size: 0.85rem; color: #7a6a58;"></p>
+  </div>
+</template>
+
+<div class="prose-page" style="padding: 24px 0;">
+  <h2>How the party game picker works</h2>
+  <p>Enter your headcount, pick a vibe (or several), and choose whether you need something for indoors, outdoors, or either. Hit "Find Games" to filter our library of {{ site.name }} party games, "Shuffle Results" to reorder them, or "Copy List" to grab the names for a group chat.</p>
+  <p>Want curated lists instead? Browse <a href="/blog/best-party-games-for-adults/">our best party games for adults</a> or our picks for <a href="/blog/party-games-for-large-groups/">large groups of 20 or more</a>.</p>
+</div>
