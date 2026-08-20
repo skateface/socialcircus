@@ -68,7 +68,12 @@
 
   function updateLoadMore() {
     if (!loadMoreBtn) return;
-    loadMoreBtn.hidden = shown >= filtered.length;
+    var remaining = filtered.length - shown;
+    loadMoreBtn.hidden = remaining <= 0;
+    if (remaining > 0) {
+      var next = Math.min(3, remaining);
+      loadMoreBtn.textContent = "Load " + next + " more";
+    }
   }
 
   form.addEventListener("submit", function (e) {
